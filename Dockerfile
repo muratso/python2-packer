@@ -6,7 +6,6 @@ FROM python:2
 ADD requirements.txt /requirements.txt
 RUN pip install -r requirements.txt
 COPY --from=build-env packer /usr/local/bin/packer
-COPY --from=build-env /bin/unzip /usr/local/bin/unzip
 ENV USER avenuecode
 
 CMD ["/bin/bash"]
